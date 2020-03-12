@@ -9,14 +9,13 @@ class SwiperDiy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, width: 750, height: 1334, allowFontScaling: false);
     return Container(
       color: Colors.white,
       height: ScreenUtil().setHeight(333),
       width: ScreenUtil().setWidth(750),
       child: Swiper(
         itemBuilder: (BuildContext context,int index){
-          return Image.network(swiperDataList[index]['image']);
+          return Image.network(swiperDataList[index]['image'], fit: BoxFit.cover,);
         },
         itemCount: 3,
         autoplay: true,
