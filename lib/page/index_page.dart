@@ -55,7 +55,10 @@ class _IndexPageState extends State<IndexPage> {
         appBar: AppBar(
           title: Text('百姓生活+'),
         ),
-        body: currentPage,
+        body: IndexedStack(
+          index: currentIndex,
+          children: tabBodies,
+        ),
         bottomNavigationBar: BottomNavigationBar(
             items: bottomTabs,
             type: BottomNavigationBarType.fixed,
