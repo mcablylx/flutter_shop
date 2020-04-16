@@ -8,6 +8,7 @@ class AdvBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(6.0),
       child: Image.network(adv_url, fit: BoxFit.cover),
     );
   }
